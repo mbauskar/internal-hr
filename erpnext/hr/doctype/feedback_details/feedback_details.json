@@ -1,0 +1,39 @@
+{
+ "creation": "2014-07-02 13:05:10.473272", 
+ "docstatus": 0, 
+ "doctype": "DocType", 
+ "document_type": "", 
+ "fields": [
+  {
+   "fieldname": "criteria", 
+   "fieldtype": "Select", 
+   "in_list_view": 1, 
+   "label": "Criteria", 
+   "options": "\nIf you are a lead, have you faced any problems managing team members?\nHave you learned on delegating and closing the tasks?\nHave you taken any efforts to improve your communication?\nHave you undergone any training outside during the Appraisal period by your own?\nAre you happy with your work profile?\nHave you faced any problem managing work & family ?", 
+   "permlevel": 0
+  }, 
+  {
+   "fieldname": "status", 
+   "fieldtype": "Select", 
+   "in_list_view": 1, 
+   "label": "Status", 
+   "options": "\nYes\nNo\nCan't Say", 
+   "permlevel": 0
+  }, 
+  {
+   "fieldname": "c", 
+   "fieldtype": "Small Text", 
+   "in_list_view": 1, 
+   "label": "Comment (If Required)", 
+   "permlevel": 0
+  }
+ ], 
+ "istable": 1, 
+ "modified": "2014-07-02 13:07:01.373000", 
+ "modified_by": "Administrator", 
+ "module": "Hr", 
+ "name": "Feedback details", 
+ "name_case": "", 
+ "owner": "Administrator", 
+ "permissions": []
+}

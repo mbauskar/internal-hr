@@ -27,6 +27,21 @@ data = [
 			},
 			{
 				"type": "doctype",
+				"name": "Self Appraisal Form",
+				"description": _("Self Appraisal Form record."),
+			},
+			{
+				"type": "doctype",
+				"name": "Performance Appraisal Form",
+				"description": _("Performance Appraisal Form record."),
+			},
+			{
+				"type": "doctype",
+				"name": "Appraisal Rate Score Card",
+				"description": _("Appraisal Rate Score Card Information."),
+			},
+			{
+				"type": "doctype",
 				"name": "Expense Claim",
 				"description": _("Claims for company expense."),
 			},

@@ -77,7 +77,8 @@ def make_salary_slip(source_name, target_doc=None):
 		"Salary Structure": {
 			"doctype": "Salary Slip",
 			"field_map": {
-				"total_earning": "gross_pay"
+				"total_earning": "gross_pay",
+				"total_earning": "monthly_ctc"
 			}
 		},
 		"Salary Structure Deduction": {

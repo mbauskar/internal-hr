@@ -1,0 +1,24 @@
+{
+ "creation": "2014-05-28 15:48:15.564321", 
+ "docstatus": 0, 
+ "doctype": "DocType", 
+ "document_type": "", 
+ "fields": [
+  {
+   "fieldname": "cc", 
+   "fieldtype": "Link", 
+   "in_list_view": 1, 
+   "label": "CC", 
+   "options": "User", 
+   "permlevel": 0
+  }
+ ], 
+ "istable": 1, 
+ "modified": "2014-05-28 15:48:15.564321", 
+ "modified_by": "Administrator", 
+ "module": "Hr", 
+ "name": "CC", 
+ "name_case": "", 
+ "owner": "Administrator", 
+ "permissions": []
+}

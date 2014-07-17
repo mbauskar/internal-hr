@@ -1,6 +1,7 @@
 {
  "allow_attach": 0, 
- "creation": "2013-01-25 11:34:53.000000", 
+ "allow_import": 1, 
+ "creation": "2013-01-25 11:34:53", 
  "docstatus": 0, 
  "doctype": "DocType", 
  "fields": [
@@ -8,12 +9,14 @@
    "description": "Download the Template, fill appropriate data and attach the modified file.\nAll dates and employee combination in the selected period will come in the template, with existing attendance records", 
    "fieldname": "download_template", 
    "fieldtype": "Section Break", 
+   "in_list_view": 1, 
    "label": "Download Template", 
    "permlevel": 0
   }, 
   {
    "fieldname": "att_fr_date", 
    "fieldtype": "Date", 
+   "in_list_view": 1, 
    "label": "Attendance From Date", 
    "oldfieldname": "attenadnce_date", 
    "oldfieldtype": "Date", 
@@ -23,6 +26,7 @@
   {
    "fieldname": "att_to_date", 
    "fieldtype": "Date", 
+   "in_list_view": 1, 
    "label": "Attendance To Date", 
    "permlevel": 0, 
    "reqd": 1
@@ -30,6 +34,7 @@
   {
    "fieldname": "get_template", 
    "fieldtype": "Button", 
+   "in_list_view": 1, 
    "label": "Get Template", 
    "oldfieldtype": "Button", 
    "permlevel": 0
@@ -37,6 +42,7 @@
   {
    "fieldname": "upload_attendance_data", 
    "fieldtype": "Section Break", 
+   "in_list_view": 1, 
    "label": "Import Attendance", 
    "permlevel": 0
   }, 
@@ -58,7 +64,7 @@
  "idx": 1, 
  "issingle": 1, 
  "max_attachments": 1, 
- "modified": "2013-12-20 19:21:54.000000", 
+ "modified": "2014-05-29 14:20:37.221992", 
  "modified_by": "Administrator", 
  "module": "HR", 
  "name": "Upload Attendance", 

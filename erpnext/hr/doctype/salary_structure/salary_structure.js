@@ -38,6 +38,34 @@ cur_frm.cscript.d_modified_amt = function(doc, cdt, cdn){
 	calculate_totals(doc, cdt, cdn);
 }
 
+cur_frm.cscript.ctc = function(doc, cdt, cdn){
+  //alert("hi");
+  var d = locals[cdt][cdn];
+  var gross=0;
+  gross=doc.ctc;
+  var cl=doc.earning_details || []
+
+  for(var i = 0; i < cl.length; i++){
+      if(cl[i].e_type=='Basic') cl[i].modified_value = gross*0.38;
+      else if(cl[i].e_type=='House Rent Allowance') cl[i].modified_value = gross*0.266;
+      else if(cl[i].e_type=='Medical Allowance') cl[i].modified_value = gross*0.076;
+      else if(cl[i].e_type=='Convayance Allowance') cl[i].modified_value=gross*0.076;
+      else if(cl[i].e_type=='Lunch Allowance') cl[i].modified_value=gross*0.06;
+      else if(cl[i].e_type=='Others') cl[i].modified_value = gross*0.142;
+  }
+  refresh_field('earning_details');
+
+  var cll=doc.deduction_details || []  
+  // var cll = getchildren('Salary Structure Deduction', doc.name, 'deduction_details', doc.doctype);
+  for(var i = 0; i < cll.length; i++){
+      if(cll[i].d_type=='Professional Tax'){
+        if(gross<15000) cll[i].d_modified_amt =175;
+        else if (gross >= 15000) cll[i].d_modified_amt = 200;
+      } 
+  }
+  refresh_field('deduction_details');
+}
+
 var calculate_totals = function(doc, cdt, cdn) {
 	var tbl1 = doc.earning_details || [];
 	var tbl2 = doc.deduction_details || [];

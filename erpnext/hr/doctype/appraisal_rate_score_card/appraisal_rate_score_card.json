@@ -1,0 +1,178 @@
+{
+ "creation": "2014-07-03 12:33:12.878302", 
+ "docstatus": 0, 
+ "doctype": "DocType", 
+ "document_type": "Master", 
+ "fields": [
+  {
+   "fieldname": "s5", 
+   "fieldtype": "Section Break", 
+   "in_list_view": 0, 
+   "label": "Serial No.5", 
+   "permlevel": 0
+  }, 
+  {
+   "default": "Above 30", 
+   "fieldname": "r5", 
+   "fieldtype": "Data", 
+   "in_list_view": 1, 
+   "label": "Rating", 
+   "permlevel": 0, 
+   "read_only": 1
+  }, 
+  {
+   "fieldname": "column_break_3", 
+   "fieldtype": "Column Break", 
+   "permlevel": 0
+  }, 
+  {
+   "default": "Consistently exceeds all requirements; superior performance.", 
+   "fieldname": "c5", 
+   "fieldtype": "Small Text", 
+   "in_list_view": 1, 
+   "label": "Comment", 
+   "permlevel": 0, 
+   "read_only": 1
+  }, 
+  {
+   "fieldname": "s4", 
+   "fieldtype": "Section Break", 
+   "label": "Serial No.4", 
+   "permlevel": 0
+  }, 
+  {
+   "default": "25 - 30", 
+   "fieldname": "r4", 
+   "fieldtype": "Data", 
+   "label": "Rating", 
+   "permlevel": 0, 
+   "read_only": 1
+  }, 
+  {
+   "fieldname": "column_break_7", 
+   "fieldtype": "Column Break", 
+   "permlevel": 0
+  }, 
+  {
+   "default": "Generally exceeds requirements with a minimum of guidance; well above average performance.", 
+   "fieldname": "c4", 
+   "fieldtype": "Small Text", 
+   "label": "Comment", 
+   "permlevel": 0, 
+   "read_only": 1
+  }, 
+  {
+   "fieldname": "s3", 
+   "fieldtype": "Section Break", 
+   "label": "Serial No.3", 
+   "permlevel": 0
+  }, 
+  {
+   "default": "15 - 24", 
+   "fieldname": "r3", 
+   "fieldtype": "Data", 
+   "label": "Rating", 
+   "permlevel": 0, 
+   "read_only": 1
+  }, 
+  {
+   "fieldname": "column_break_11", 
+   "fieldtype": "Column Break", 
+   "permlevel": 0
+  }, 
+  {
+   "default": "Responsibilities met in a wholly satisfactory manner; normal guidance and  supervision required.", 
+   "fieldname": "c3", 
+   "fieldtype": "Small Text", 
+   "label": "Comment", 
+   "permlevel": 0, 
+   "read_only": 1
+  }, 
+  {
+   "fieldname": "s2", 
+   "fieldtype": "Section Break", 
+   "label": "Serial No.2", 
+   "permlevel": 0
+  }, 
+  {
+   "default": "10 - 14", 
+   "fieldname": "r2", 
+   "fieldtype": "Data", 
+   "label": "Rating", 
+   "permlevel": 0, 
+   "read_only": 1
+  }, 
+  {
+   "fieldname": "column_break_15", 
+   "fieldtype": "Column Break", 
+   "permlevel": 0
+  }, 
+  {
+   "default": "Improvement needed in some key job areas; considerable guidance and supervision are required.", 
+   "fieldname": "c2", 
+   "fieldtype": "Small Text", 
+   "label": "Comment", 
+   "permlevel": 0, 
+   "read_only": 1
+  }, 
+  {
+   "fieldname": "s1", 
+   "fieldtype": "Section Break", 
+   "label": "Serial No.1", 
+   "permlevel": 0
+  }, 
+  {
+   "default": "Below 10", 
+   "fieldname": "r1", 
+   "fieldtype": "Data", 
+   "label": "Rating", 
+   "permlevel": 0, 
+   "read_only": 1
+  }, 
+  {
+   "fieldname": "column_break_19", 
+   "fieldtype": "Column Break", 
+   "permlevel": 0
+  }, 
+  {
+   "default": "Major shortcomings in performance; Performance improvement plan required to improve performance within a set time frame.", 
+   "fieldname": "c1", 
+   "fieldtype": "Small Text", 
+   "label": "Comment", 
+   "permlevel": 0, 
+   "read_only": 1
+  }
+ ], 
+ "icon": "icon-file-text", 
+ "is_submittable": 0, 
+ "issingle": 0, 
+ "modified": "2014-07-03 12:48:21.137321", 
+ "modified_by": "Administrator", 
+ "module": "Hr", 
+ "name": "Appraisal Rate Score Card", 
+ "name_case": "", 
+ "owner": "Administrator", 
+ "permissions": [
+  {
+   "create": 1, 
+   "permlevel": 0, 
+   "read": 1, 
+   "role": "Employee", 
+   "write": 1
+  }, 
+  {
+   "create": 1, 
+   "permlevel": 0, 
+   "read": 1, 
+   "role": "HR Manager", 
+   "submit": 0, 
+   "write": 1
+  }, 
+  {
+   "permlevel": 0, 
+   "read": 1, 
+   "role": "HR User", 
+   "write": 1
+  }
+ ]
+}

@@ -1,7 +1,8 @@
 {
  "allow_attach": 1, 
+ "allow_import": 1, 
  "autoname": "LAP/.#####", 
- "creation": "2013-02-20 11:18:11.000000", 
+ "creation": "2013-02-20 11:18:11", 
  "description": "Apply / Approve Leaves", 
  "docstatus": 0, 
  "doctype": "DocType", 
@@ -11,7 +12,7 @@
    "default": "Open", 
    "fieldname": "status", 
    "fieldtype": "Select", 
-   "in_list_view": 1, 
+   "in_list_view": 0, 
    "label": "Status", 
    "no_copy": 1, 
    "options": "Open\nApproved\nRejected", 
@@ -29,7 +30,7 @@
    "fieldname": "leave_type", 
    "fieldtype": "Select", 
    "in_filter": 1, 
-   "in_list_view": 1, 
+   "in_list_view": 0, 
    "label": "Leave Type", 
    "options": "link:Leave Type", 
    "permlevel": 0, 
@@ -39,7 +40,7 @@
   {
    "fieldname": "from_date", 
    "fieldtype": "Date", 
-   "in_list_view": 1, 
+   "in_list_view": 0, 
    "label": "From Date", 
    "permlevel": 0, 
    "reqd": 1, 
@@ -92,6 +93,15 @@
    "permlevel": 0, 
    "read_only": 1, 
    "search_index": 0
+  }, 
+  {
+   "fieldname": "designation", 
+   "fieldtype": "Link", 
+   "in_list_view": 1, 
+   "label": "Designation", 
+   "options": "Designation", 
+   "permlevel": 0, 
+   "read_only": 1
   }, 
   {
    "fieldname": "leave_balance", 
@@ -182,7 +192,7 @@
  "idx": 1, 
  "is_submittable": 1, 
  "max_attachments": 3, 
- "modified": "2014-01-20 17:48:56.000000", 
+ "modified": "2014-07-10 10:23:20.751179", 
  "modified_by": "Administrator", 
  "module": "HR", 
  "name": "Leave Application", 

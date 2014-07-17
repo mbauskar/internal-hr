@@ -31,8 +31,8 @@ def get_conditions(filters):
 		month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", 
 			"Dec"].index(filters["month"]) + 1
 		conditions += " and month(date_of_birth) = '%s'" % month
-	
+
 	if filters.get("company"): conditions += " and company = '%s'" % \
-		filters["company"].repalce("'", "\'")
+		filters["company"].replace("'", "\'")
 	
 	return conditions

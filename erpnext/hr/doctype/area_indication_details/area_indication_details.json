@@ -1,0 +1,42 @@
+{
+ "creation": "2014-07-02 12:56:19.352829", 
+ "docstatus": 0, 
+ "doctype": "DocType", 
+ "document_type": "", 
+ "fields": [
+  {
+   "fieldname": "areas", 
+   "fieldtype": "Data", 
+   "in_list_view": 1, 
+   "label": "Areas", 
+   "permlevel": 0
+  }, 
+  {
+   "fieldname": "assignments", 
+   "fieldtype": "Data", 
+   "in_list_view": 1, 
+   "label": "Assignments", 
+   "permlevel": 0
+  }, 
+  {
+   "fieldname": "column_break_3", 
+   "fieldtype": "Column Break", 
+   "permlevel": 0
+  }, 
+  {
+   "fieldname": "reasons", 
+   "fieldtype": "Small Text", 
+   "in_list_view": 1, 
+   "label": "Reasons", 
+   "permlevel": 0
+  }
+ ], 
+ "istable": 1, 
+ "modified": "2014-07-02 12:58:29.108780", 
+ "modified_by": "Administrator", 
+ "module": "Hr", 
+ "name": "Area Indication Details", 
+ "name_case": "", 
+ "owner": "Administrator", 
+ "permissions": []
+}

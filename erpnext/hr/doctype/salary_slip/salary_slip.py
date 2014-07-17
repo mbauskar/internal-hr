@@ -23,6 +23,7 @@ class SalarySlip(TransactionBase):
 			struct = self.check_sal_struct()
 			if struct:
 				self.pull_sal_struct(struct)
+				
 
 	def check_sal_struct(self):
 		struct = frappe.db.sql("""select name from `tabSalary Structure`
@@ -33,8 +34,10 @@ class SalarySlip(TransactionBase):
 		return struct and struct[0][0] or ''
 
 	def pull_sal_struct(self, struct):
-		from erpnext.hr.doctype.salary_structure.salary_structure import get_mapped_doc
-		self.update(get_mapped_doc(struct, self))
+		from erpnext.hr.doctype.salary_structure.salary_structure import make_salary_slip
+		self.update(make_salary_slip(struct, self).as_dict())
+
+	
 
 	def pull_emp_details(self):
 		emp = frappe.db.get_value("Employee", self.employee,
@@ -70,6 +73,7 @@ class SalarySlip(TransactionBase):
 
 	def get_payment_days(self, m):
 		payment_days = m['month_days']
+		#payment_days=frappe.db.sql('select count(*)')
 		emp = frappe.db.sql("select date_of_joining, relieving_date from `tabEmployee` \
 			where name = %s", self.employee, as_dict=1)[0]
 
@@ -107,7 +111,8 @@ class SalarySlip(TransactionBase):
 
 	def calculate_lwp(self, holidays, m):
 		lwp = 0
-		for d in range(m['month_days']):
+		month = frappe.get_doc('Salary Manager').get_month_details(self.fiscal_year, self.month)
+		for d in range(month['month_days']):
 			dt = add_days(cstr(m['month_start_date']), d)
 			if dt not in holidays:
 				leave = frappe.db.sql("""

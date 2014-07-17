@@ -1,0 +1,42 @@
+{
+ "creation": "2014-07-02 13:00:34.506184", 
+ "docstatus": 0, 
+ "doctype": "DocType", 
+ "document_type": "", 
+ "fields": [
+  {
+   "fieldname": "areas", 
+   "fieldtype": "Data", 
+   "in_list_view": 1, 
+   "label": "Areas", 
+   "permlevel": 0
+  }, 
+  {
+   "fieldname": "reasons", 
+   "fieldtype": "Small Text", 
+   "in_list_view": 1, 
+   "label": "Reasons", 
+   "permlevel": 0
+  }, 
+  {
+   "fieldname": "column_break_3", 
+   "fieldtype": "Column Break", 
+   "permlevel": 0
+  }, 
+  {
+   "fieldname": "action_plan_to_improve", 
+   "fieldtype": "Small Text", 
+   "in_list_view": 1, 
+   "label": "Action Plan to Improve", 
+   "permlevel": 0
+  }
+ ], 
+ "istable": 1, 
+ "modified": "2014-07-02 13:02:05.530421", 
+ "modified_by": "Administrator", 
+ "module": "Hr", 
+ "name": "Improvement Details", 
+ "name_case": "", 
+ "owner": "Administrator", 
+ "permissions": []
+}

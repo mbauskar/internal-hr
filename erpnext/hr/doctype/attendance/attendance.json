@@ -1,7 +1,7 @@
 {
  "allow_import": 1, 
  "autoname": "naming_series:", 
- "creation": "2013-01-10 16:34:13.000000", 
+ "creation": "2013-01-10 16:34:13", 
  "docstatus": 0, 
  "doctype": "DocType", 
  "document_type": "Master", 
@@ -45,6 +45,15 @@
    "oldfieldname": "employee_name", 
    "oldfieldtype": "Data", 
    "permlevel": 0
+  }, 
+  {
+   "fieldname": "designation", 
+   "fieldtype": "Link", 
+   "in_list_view": 1, 
+   "label": "Designation", 
+   "options": "Designation", 
+   "permlevel": 0, 
+   "read_only": 1
   }, 
   {
    "default": "Present", 
@@ -124,18 +133,31 @@
    "permlevel": 0, 
    "print_hide": 1, 
    "read_only": 1
+  }, 
+  {
+   "fieldname": "in_time", 
+   "fieldtype": "Time", 
+   "label": "In Time", 
+   "permlevel": 0
+  }, 
+  {
+   "fieldname": "out_time", 
+   "fieldtype": "Time", 
+   "label": "Out Time", 
+   "permlevel": 0
   }
  ], 
  "icon": "icon-ok", 
  "idx": 1, 
  "is_submittable": 1, 
- "modified": "2014-01-20 17:48:23.000000", 
+ "modified": "2014-07-09 12:13:18.758507", 
  "modified_by": "Administrator", 
  "module": "HR", 
  "name": "Attendance", 
  "owner": "ashwini@webnotestech.com", 
  "permissions": [
   {
+   "amend": 0, 
    "cancel": 1, 
    "create": 1, 
    "delete": 1, 
@@ -146,6 +168,14 @@
    "report": 1, 
    "role": "System Manager", 
    "submit": 1, 
+   "write": 1
+  }, 
+  {
+   "create": 1, 
+   "import": 1, 
+   "permlevel": 0, 
+   "read": 1, 
+   "role": "Maintenance Manager", 
    "write": 1
   }, 
   {
@@ -173,6 +203,13 @@
    "role": "HR Manager", 
    "submit": 1, 
    "write": 1
+  }, 
+  {
+   "permlevel": 0, 
+   "read": 1, 
+   "report": 1, 
+   "restricted": 1, 
+   "role": "Employee"
   }
  ], 
  "search_fields": "employee, employee_name, att_date, status"

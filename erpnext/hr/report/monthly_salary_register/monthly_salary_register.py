@@ -59,7 +59,7 @@ def get_columns(salary_slips):
 	
 def get_salary_slips(filters):
 	conditions, filters = get_conditions(filters)
-	salary_slips = frappe.db.sql("""select * from `tabSalary Slip` where docstatus = 1 %s
+	salary_slips = frappe.db.sql("""select * from `tabSalary Slip` where docstatus != 2 %s
 		order by employee, month""" % conditions, filters, as_dict=1)
 	
 	if not salary_slips:
@@ -70,6 +70,7 @@ def get_salary_slips(filters):
 	
 def get_conditions(filters):
 	conditions = ""
+	# frappe.errprint(filters)
 	if filters.get("month"):
 		month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", 
 			"Dec"].index(filters["month"]) + 1
