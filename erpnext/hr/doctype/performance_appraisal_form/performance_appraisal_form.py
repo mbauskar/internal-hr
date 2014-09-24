@@ -8,7 +8,7 @@ from datetime import datetime
 import time
 from datetime import date
 from frappe.utils import getdate
-from frappe.utils import cint
+from frappe.utils import cint , flt
 
 
 class PerformanceAppraisalForm(Document):
@@ -38,10 +38,12 @@ class PerformanceAppraisalForm(Document):
 		# frappe.errprint(diff1)
 
 	def get_total(self):
-		total_rate=cint(self.r1)+cint(self.r2)+cint(self.r3)+cint(self.r4)+cint(self.r5)+cint(self.r6)+cint(self.r7)+cint(self.r8)+cint(self.r9)+cint(self.r10)+cint(self.r11)+cint(self.r12)
-		self.total_rating = total_rate
+		# total_rate=0.0
+		# frappe.errprint(total_rate)
+		total_rate=flt(self.r1)+flt(self.r2)+flt(self.r3)+flt(self.r4)+flt(self.r5)+flt(self.r6)+flt(self.r7)+flt(self.r8)+flt(self.r9)+flt(self.r10)+flt(self.r11)+flt(self.r12)
+		self.total_rating = flt(total_rate)
+		# frappe.errprint(total_rate)
 		frappe.errprint(self.total_rating)
-		# if (self.total_rating==)
 		return {
 			'total_rate':total_rate
 		}

@@ -112,9 +112,9 @@
   }, 
   {
    "fieldname": "r1", 
-   "fieldtype": "Select", 
+   "fieldtype": "Data", 
    "label": "Rating", 
-   "options": "\n4\n3\n2\n1", 
+   "options": "", 
    "permlevel": 0, 
    "read_only": 0, 
    "reqd": 0
@@ -146,9 +146,9 @@
   }, 
   {
    "fieldname": "r2", 
-   "fieldtype": "Select", 
+   "fieldtype": "Data", 
    "label": "Rating", 
-   "options": "\n4\n3\n2\n1", 
+   "options": "", 
    "permlevel": 0, 
    "read_only": 0, 
    "reqd": 0
@@ -181,9 +181,9 @@
   }, 
   {
    "fieldname": "r3", 
-   "fieldtype": "Select", 
+   "fieldtype": "Data", 
    "label": "Rating", 
-   "options": "\n4\n3\n2\n1", 
+   "options": "", 
    "permlevel": 0, 
    "reqd": 0
   }, 
@@ -214,9 +214,9 @@
   }, 
   {
    "fieldname": "r4", 
-   "fieldtype": "Select", 
+   "fieldtype": "Data", 
    "label": "Rating", 
-   "options": "\n4\n3\n2\n1", 
+   "options": "", 
    "permlevel": 0, 
    "reqd": 0
   }, 
@@ -247,9 +247,9 @@
   }, 
   {
    "fieldname": "r5", 
-   "fieldtype": "Select", 
+   "fieldtype": "Data", 
    "label": "Rating", 
-   "options": "\n4\n3\n2\n1", 
+   "options": "", 
    "permlevel": 0, 
    "reqd": 0
   }, 
@@ -280,9 +280,9 @@
   }, 
   {
    "fieldname": "r6", 
-   "fieldtype": "Select", 
+   "fieldtype": "Data", 
    "label": "Rating", 
-   "options": "\n4\n3\n2\n1", 
+   "options": "", 
    "permlevel": 0, 
    "reqd": 0
   }, 
@@ -313,9 +313,9 @@
   }, 
   {
    "fieldname": "r7", 
-   "fieldtype": "Select", 
+   "fieldtype": "Data", 
    "label": "Rating", 
-   "options": "\n4\n3\n2\n1", 
+   "options": "", 
    "permlevel": 0, 
    "reqd": 0
   }, 
@@ -346,9 +346,9 @@
   }, 
   {
    "fieldname": "r8", 
-   "fieldtype": "Select", 
+   "fieldtype": "Data", 
    "label": "Rating", 
-   "options": "\n4\n3\n2\n1", 
+   "options": "", 
    "permlevel": 0, 
    "reqd": 0
   }, 
@@ -379,9 +379,9 @@
   }, 
   {
    "fieldname": "r9", 
-   "fieldtype": "Select", 
+   "fieldtype": "Data", 
    "label": "Rating", 
-   "options": "\n4\n3\n2\n1", 
+   "options": "", 
    "permlevel": 0, 
    "reqd": 0
   }, 
@@ -412,9 +412,9 @@
   }, 
   {
    "fieldname": "r10", 
-   "fieldtype": "Select", 
+   "fieldtype": "Data", 
    "label": "Rating", 
-   "options": "\n4\n3\n2\n1", 
+   "options": "", 
    "permlevel": 0, 
    "reqd": 0
   }, 
@@ -445,9 +445,9 @@
   }, 
   {
    "fieldname": "r11", 
-   "fieldtype": "Select", 
+   "fieldtype": "Data", 
    "label": "Rating", 
-   "options": "\n4\n3\n2\n1", 
+   "options": "", 
    "permlevel": 0, 
    "reqd": 0
   }, 
@@ -478,9 +478,9 @@
   }, 
   {
    "fieldname": "r12", 
-   "fieldtype": "Select", 
+   "fieldtype": "Data", 
    "label": "Rating", 
-   "options": "\n4\n3\n2\n1", 
+   "options": "", 
    "permlevel": 0, 
    "reqd": 0
   }, 
@@ -638,7 +638,7 @@
  ], 
  "icon": "icon-money", 
  "is_submittable": 1, 
- "modified": "2014-07-10 12:33:44.121965", 
+ "modified": "2014-07-28 17:04:02.340002", 
  "modified_by": "Administrator", 
  "module": "Hr", 
  "name": "Performance Appraisal Form", 
@@ -654,6 +654,16 @@
    "print": 1, 
    "read": 1, 
    "role": "HR Manager", 
+   "submit": 1, 
+   "write": 1
+  }, 
+  {
+   "cancel": 1, 
+   "create": 1, 
+   "delete": 1, 
+   "permlevel": 0, 
+   "read": 1, 
+   "role": "System Manager", 
    "submit": 1, 
    "write": 1
   }

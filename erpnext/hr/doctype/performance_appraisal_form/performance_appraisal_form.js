@@ -23,23 +23,23 @@ cur_frm.cscript.total = function(doc, cdt, cdn) {
 	get_server_fields('get_total','','',doc, cdt, cdn, 1, function(r){
 		// console.log(r.total_rating)
 		refresh_field('total_rating');
-		if (r.total_rating > 30 ){
+		if (r.total_rating > 42 ){
 			cur_frm.set_value('comment_on_rating', "Consistently exceeds all requirements; superior performance.")
 			refresh_field('comment_on_rating');
 		}
-		else if(r.total_rating > 24 && r.total_rating <=30){
+		else if(r.total_rating > 35 && r.total_rating <=42){
 			cur_frm.set_value('comment_on_rating', "Generally exceeds requirements with a minimum of guidance; well above average performance.")
 			refresh_field('comment_on_rating');
 		}
-		else if(r.total_rating > 14 && r.total_rating <=24){
+		else if(r.total_rating > 29 && r.total_rating <=35){
 			cur_frm.set_value('comment_on_rating', "Responsibilities met in a wholly satisfactory manner; normal guidance and supervision required.")
 			refresh_field('comment_on_rating');
 		}
-		else if(r.total_rating > 9 && r.total_rating <=14){
+		else if(r.total_rating > 23 && r.total_rating <=29){
 			cur_frm.set_value('comment_on_rating', "Improvement needed in some key job areas; considerable guidance and supervision are required.")
 			refresh_field('comment_on_rating');
 		}
-		else if(r.total_rating <=9){
+		else if(r.total_rating <=23){
 			cur_frm.set_value('comment_on_rating', "Major shortcomings in performance; Performance improvement plan required to improve performance within a set time frame.")
 			refresh_field('comment_on_rating');
 		}
