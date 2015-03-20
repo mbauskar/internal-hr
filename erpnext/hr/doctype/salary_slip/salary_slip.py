@@ -87,11 +87,38 @@ class SalarySlip(TransactionBase):
 		if emp['date_of_joining']:
 			if getdate(emp['date_of_joining']) > m['month_start_date'] and \
 				getdate(emp['date_of_joining']) < m['month_end_date']:
-					payment_days = payment_days - getdate(emp['date_of_joining']).day + 1
+					#payment_days = payment_days - getdate(emp['date_of_joining']).day + 1
+					payment_days = self.get_payments_days_doj(emp,m)
 			elif getdate(emp['date_of_joining']) > m['month_end_date']:
 				payment_days = 0
 
 		return payment_days
+
+
+
+	def get_payments_days_doj(self,emp,m):
+		total_days_from_doj=frappe.db.sql(""" select DATEDIFF('%s','%s')"""%(m['month_end_date'],emp['date_of_joining']),as_list=1)
+		holidays=self.get_holidays(emp,m)
+		payment_days=total_days_from_doj[0][0]-len(holidays)
+		return payment_days
+
+	def get_holidays(self,emp,m):
+		holidays = frappe.db.sql("""select t1.holiday_date
+			from `tabHoliday` t1, tabEmployee t2
+			where t1.parent = t2.holiday_list and t2.name = %s
+			and t1.holiday_date between %s and %s""",
+			(self.employee, emp['date_of_joining'], m['month_end_date']))
+		if not holidays:
+			holidays = frappe.db.sql("""select t1.holiday_date
+				from `tabHoliday` t1, `tabHoliday List` t2
+				where t1.parent = t2.name and ifnull(t2.is_default, 0) = 1
+				and t2.fiscal_year = %s
+				and t1.holiday_date between %s and %s""", (self.fiscal_year,
+					emp['date_of_joining'], m['month_end_date']))
+		holidays = [cstr(i[0]) for i in holidays]
+		return holidays
+
+
 
 	def get_holidays_for_employee(self, m):
 		holidays = frappe.db.sql("""select t1.holiday_date
